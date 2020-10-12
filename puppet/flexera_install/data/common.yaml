@@ -1,0 +1,62 @@
+---
+#RHEL parameters
+flexera_install::rhel::service: 'mgsusageag'
+flexera_install::rhel::source: 'puppet:///installer_files/flexera/RHEL'
+flexera_install::rhel::dirs: 
+  - '/var/opt'
+  - '/var/opt/managesoft'
+  - '/var/opt/managesoft/etc' 
+flexera_install::rhel::files:
+  response:
+    name: 'mgsft_rollout_response'
+    path: '/var/tmp'
+  config:
+    name: 'config.save.ini'
+    path: '/var/opt/managesoft/etc'
+  package:
+    name: 'managesoft-12.2.0-1.x86_64.rpm'
+    path: '/tmp'
+
+#Ubuntu parameters
+flexera_install::ubuntu::service: 'mgsusageag'
+flexera_install::ubuntu::source: 'puppet:///installer_files/flexera/ubuntu'
+flexera_install::ubuntu::dirs: 
+  - '/var/opt'
+  - '/var/opt/managesoft'
+  - '/var/opt/managesoft/etc' 
+flexera_install::ubuntu::files:
+  response:
+    name: 'mgsft_rollout_response'
+    path: '/var/tmp'
+  config:
+    name: 'config.save.ini'
+    path: '/var/opt/managesoft/etc'
+  package:
+    name: 'managesoft_12.2.0_amd64.deb'
+    path: '/tmp'
+
+#Windows parameters
+flexera_install::windows::services:
+  - 'mgssecsvc'
+  - 'ndinit'
+flexera_install::windows::source: 'puppet:///installer_files/flexera/windows'
+flexera_install::windows::dir: 'C:\Windows\temp\flexera_install'
+flexera_install::windows::files:
+  registry:
+    name: 'bsserver.reg'
+    path: "%{lookup('flexera_install::windows::dir')}"
+  data1:
+    name: 'Data1.cab'
+    path: "%{lookup('flexera_install::windows::dir')}"
+  package:
+    name: 'FlexNet Inventory Agent.msi'
+    path: "%{lookup('flexera_install::windows::dir')}"
+  mgssetup:
+    name: 'mgssetup.ini'
+    path: "%{lookup('flexera_install::windows::dir')}"
+  setup_ex:
+    name: 'setup.exe'
+    path: "%{lookup('flexera_install::windows::dir')}"
+  setup_ini:
+    name: 'Setup.ini'
+    path: "%{lookup('flexera_install::windows::dir')}"

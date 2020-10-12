@@ -1,0 +1,23 @@
+{
+  "u_los": "",
+  "u_business_unit": "",
+  "u_cluster_org": "",
+  "subcategory": "Computer",
+  "virtual": "true",
+  "u_used_by_company": "",
+  "assignment_group": "",
+  "company": "",
+  "u_managing_territory": "",
+  "u_used_by_territory": "",
+  "u_incident_assignment_group_l1": "",
+  "owned_by": "",
+  "u_region_org": "",
+  "support_group": "",
+  "u_owned_by_secondary": "",
+  "u_string_managing_territory": "",
+  "u_memory_size_gb": "",
+  "sys_domain": "",
+  "supported_by": "",
+  "u_type": "Virtual Server",
+  "u_cluster": ""
+}

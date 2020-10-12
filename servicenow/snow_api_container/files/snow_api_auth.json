@@ -1,0 +1,20 @@
+{
+    "svc": {
+        "acct": "",
+        "pass": ""
+    },
+    "stage": {
+        "user": "",
+        "token": "",
+        "api_key": "",
+        "api_secret": "",
+        "url": ""
+    },
+    "prod": {
+        "user": "",
+        "token": "",
+        "api_key": "",
+        "api_secret": "",
+        "url": ""
+    }
+}
